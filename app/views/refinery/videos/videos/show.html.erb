@@ -1,0 +1,24 @@
+<% content_for :body_content_title do %>
+  <%= @video.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <%= raw UnvlogIt.new(@video.url).embed_html %>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="videos">
+      <% @videos.each do |video| %>
+        <li>
+          <%= link_to video.title, refinery.videos_video_path(video) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>
