@@ -4,7 +4,7 @@
 
 <% content_for :body do %>
   <section>
-    <%= raw UnvlogIt.new(@video.url).embed_html %>
+    <%= raw UnvlogIt.new(@video.video_url).embed_html %>
   </section>
 <% end %>
 

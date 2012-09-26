@@ -1,14 +1,17 @@
 class CreateVideosVideos < ActiveRecord::Migration
 
   def up
-    create_table :refinery_videos do |t|
+    create_table Refinery::Videos::Video.table_name do |t|
       t.string :title
-      t.string :url
+      t.string :video_url
+      t.string :custom_url
       t.integer :position
+      t.string :slug
 
       t.timestamps
     end
 
+    add_index Refinery::Videos::Video.table_name, :slug
   end
 
   def down
@@ -20,7 +23,7 @@ class CreateVideosVideos < ActiveRecord::Migration
       ::Refinery::Page.delete_all({:link_url => "/videos/videos"})
     end
 
-    drop_table :refinery_videos
+    drop_table Refinery::Videos::Video.table_name
 
   end
 

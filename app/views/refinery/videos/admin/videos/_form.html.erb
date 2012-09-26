@@ -3,19 +3,22 @@
               :object => @video,
               :include_object_name => true %>
 
-  
+
   <div class='field'>
     <%= f.label :title -%>
     <%= f.text_field :title, :class => 'larger widest'  -%>
-
   </div>
-  
+
   <div class='field'>
-    <%= f.label :url -%>
-    <%= f.text_field :url  -%>
-
+    <%= f.label :video_url -%>
+    <%= f.text_field :video_url  -%>
   </div>
-  
+
+  <div class='field'>
+    <%= f.label :custom_url -%>
+    <%= f.text_field :custom_url  -%>
+  </div>
+
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,
              :delete_title => t('delete', :scope => 'refinery.videos.admin.videos.video'),

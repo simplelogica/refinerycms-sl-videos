@@ -25,4 +25,5 @@ en:
     attributes:
       'refinery/videos/video':
         title: Title
-        url: Url
+        video_url: Video url
+        custom_url: Custom url
