@@ -6,9 +6,9 @@ module Refinery
       extend FriendlyId
       friendly_id :friendly_id_source, :use => [:slugged]
 
-      attr_accessible :title, :video_url, :custom_url, :position
+      attr_accessible :title, :video_url, :text, :custom_url, :position
 
-      acts_as_indexed :fields => [:title, :url]
+      acts_as_indexed :fields => [:title, :text, :url]
 
       validates :title, :presence => true, :uniqueness => true
 

@@ -15,8 +15,13 @@
   </div>
 
   <div class='field'>
+    <%= f.label :text -%>
+    <%= f.text_area :text, :rows => 20, :class => 'wymeditor widest' -%>
+  </div>
+
+  <div class='field'>
     <%= f.label :custom_url -%>
-    <%= f.text_field :custom_url  -%>
+    <%= f.text_field :custom_url -%>
   </div>
 
   <%= render '/refinery/admin/form_actions', :f => f,

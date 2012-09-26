@@ -5,6 +5,9 @@
 <% content_for :body do %>
   <section>
     <%= raw UnvlogIt.new(@video.video_url).embed_html %>
+    <%= unless @video.text.blank? -%>
+      <p><%= raw @video.text %></p>
+    <% end %>
   </section>
 <% end %>
 
