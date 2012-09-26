@@ -3,8 +3,10 @@ module Refinery
     class Video < Refinery::Core::BaseModel
       self.table_name = 'refinery_videos'
 
+      translates :title, :video_text, :video_url, :custom_url, :slug
+
       extend FriendlyId
-      friendly_id :friendly_id_source, :use => [:slugged]
+      friendly_id :friendly_id_source, :use => [:slugged, :globalize]
 
       attr_accessible :title, :video_url, :video_text, :custom_url, :position
 
