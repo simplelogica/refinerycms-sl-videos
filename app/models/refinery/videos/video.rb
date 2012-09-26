@@ -23,11 +23,20 @@ module Refinery
       end
 
       def initialize_attributes
-        self.video_data = self.load_video_data
+        self.load_video_data
       end
 
       def load_video_data
-        self.video_url.blank? ? nil : (UnvlogIt.new(self.video_url) rescue nil)
+        self.video_data = self.video_url.blank? ? nil : (UnvlogIt.new(self.video_url) rescue nil)
+      end
+
+      def video_url= video_url
+        self[:video_url] = video_url
+        self.load_video_data
+      end
+
+      def video_data
+        video_data ||= self.load_video_data
       end
     end
   end
