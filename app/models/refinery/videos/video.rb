@@ -8,7 +8,7 @@ module Refinery
 
       attr_accessible :title, :video_url, :text, :custom_url, :position
 
-      acts_as_indexed :fields => [:title, :text, :url]
+      acts_as_indexed :fields => [:title, :text]
 
       validates :title, :presence => true, :uniqueness => true
 
