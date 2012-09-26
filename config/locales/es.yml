@@ -27,4 +27,5 @@ es:
       'refinery/videos/video':
         title: Title
         video_url: Url del video
+        video_text: Texto del vídeo
         custom_url: Url personalizada
