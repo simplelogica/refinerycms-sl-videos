@@ -25,7 +25,7 @@ es:
   activerecord:
     attributes:
       'refinery/videos/video':
-        title: Title
+        title: Título
         video_url: Url del video
         video_text: Texto del vídeo
         custom_url: Url personalizada
