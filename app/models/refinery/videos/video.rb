@@ -11,6 +11,7 @@ module Refinery
       acts_as_indexed :fields => [:title, :text]
 
       validates :title, :presence => true, :uniqueness => true
+      validates :video_url, :presence => true
 
       def friendly_id_source
         custom_url.presence || title
