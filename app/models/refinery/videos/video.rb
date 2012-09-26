@@ -20,6 +20,8 @@ module Refinery
       after_initialize :initialize_attributes
       before_validation :set_title_from_video, :if => 'title.blank?'
 
+      delegate :thumbnail, :embed_html, :to => :video_data, :allow_nil => true
+
       def friendly_id_source
         custom_url.presence || title
       end
