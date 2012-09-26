@@ -10,7 +10,11 @@
           <% end %>
       <% end %>
       <%= video.created_at.try(:strftime, '%b %d, %Y') %>
+      <% if video.video_data %>
+      <p style="text-align: center"><%= image_tag video.video_data.thumbnail %></p>
+      <% end %>
     </span>
+
   </span>
   <span class='actions'>
 
