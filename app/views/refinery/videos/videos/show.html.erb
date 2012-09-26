@@ -4,7 +4,7 @@
 
 <% content_for :body do %>
   <section>
-    <%= raw @video.video_data.embed_html  %>
+    <%= raw @video.video_data.embed_html unless @video.video_data.blank? %>
     <% unless @video.video_text.blank? %>
       <p><%= raw @video.video_text %></p>
     <% end %>
