@@ -18,6 +18,8 @@ module Refinery
       validates :video_url, :presence => true
 
       after_initialize :initialize_attributes
+      before_validation :set_title_from_video, :if => 'title.blank?'
+
       def friendly_id_source
         custom_url.presence || title
       end
@@ -35,8 +37,8 @@ module Refinery
         self.load_video_data
       end
 
-      def video_data
-        video_data ||= self.load_video_data
+      def set_title_from_video
+        self.title = self.video_data.title unless self.video_data.blank?
       end
     end
   end
