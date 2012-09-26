@@ -1,14 +1,23 @@
 <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(video) -%>">
   <span class='title'>
     <%= video.title %>
-
+    <span class="preview">
+      <% video.translations.each do |translation| %>
+        <% if translation.title.present? %>
+          <%= link_to refinery_icon_tag("flags/#{translation.locale}.png", :size => '16x11'),
+              refinery.edit_videos_admin_video_path(video, :switch_locale => translation.locale),
+              :class => 'locale' %>
+          <% end %>
+      <% end %>
+      <%= video.created_at.try(:strftime, '%b %d, %Y') %>
+    </span>
   </span>
   <span class='actions'>
-    
+
     <%= link_to refinery_icon_tag("application_go.png"), refinery.videos_video_path(video),
         :title => t('.view_live_html'),
         :target => "_blank" %>
-    
+
     <%= link_to refinery_icon_tag("application_edit.png"), refinery.edit_videos_admin_video_path(video),
          :title => t('.edit') %>
     <%= link_to refinery_icon_tag("delete.png"), refinery.videos_admin_video_path(video),
