@@ -19,6 +19,8 @@ es:
             view_live_html: Ver este video como abierto al público <br/><em>(abre en ventana nueva)</em>
             edit: Editar este video
             delete: Borrar este video para siempre
+          form:
+            title_description: Dejar vacío para recoger el título del vídeo
       videos:
         show:
           other: Otros vídeos

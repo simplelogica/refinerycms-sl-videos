@@ -7,7 +7,7 @@
         :current_locale => Thread.current[:globalize_locale] if Refinery.i18n_enabled? %>
 
   <div class='field'>
-    <%= f.label :title -%>
+    <%= f.label :title -%>(<%= t '.title_description' %>)
     <%= f.text_field :title, :class => 'larger widest'  -%>
   </div>
 
