@@ -2,7 +2,7 @@
 
 ## About
 
-A page for videos from diferent sources, in a blog format with multilingual support and custom urls.
+A page for videos from diferent sources, in a blog format with multilingual support, custom urls and seo.
 Check supported video formats of [acts\_as\_unvlogable](https://github.com/mamuso/acts_as_unvlogable).
 
 ## Requirements
@@ -12,7 +12,6 @@ Check supported video formats of [acts\_as\_unvlogable](https://github.com/mamus
 ## TODO
 
 * Build the gem
-* Seo
 * Documentation
 * Tests
 

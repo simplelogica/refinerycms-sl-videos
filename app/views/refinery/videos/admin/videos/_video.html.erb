@@ -11,7 +11,7 @@
       <% end %>
       <%= video.created_at.try(:strftime, '%b %d, %Y') %>
       <% if video.video_data %>
-      <p style="text-align: center"><%= image_tag video.thumbnail %></p>
+      <div style="text-align: center;"><%= image_tag video.thumbnail %></div>
       <% end %>
     </span>
 
