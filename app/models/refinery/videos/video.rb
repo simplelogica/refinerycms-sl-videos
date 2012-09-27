@@ -20,7 +20,7 @@ module Refinery
       seo_fields = ::SeoMeta.attributes.keys.map{|a| [a, :"#{a}="]}.flatten
       delegate(*(seo_fields << {:to => :translation}))
 
-      attr_accessible :title, :video_url, :video_text, :custom_url, :position
+      attr_accessible :title, :video_url, :video_text, :custom_url, :position, :width, :height
       attr_accessible :browser_title, :meta_keywords, :meta_description
       attr_accessor :locale # to hold temporarily
 
@@ -54,6 +54,10 @@ module Refinery
 
       def set_title_from_video
         self.title = self.video_data.title unless self.video_data.blank?
+      end
+
+      def embed_html_with_dimensions
+        self.width && self.height ? self.embed_html(self.width, self.height) : self.embed_html
       end
     end
   end

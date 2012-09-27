@@ -4,7 +4,7 @@
 
 <% content_for :body do %>
   <section>
-    <%= raw @video.embed_html %>
+    <%= raw @video.embed_html_with_dimensions %>
     <div id="video-text"><%= raw @video.video_text %></div>
   </section>
 <% end %>

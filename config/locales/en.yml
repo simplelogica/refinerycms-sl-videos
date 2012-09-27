@@ -30,3 +30,5 @@ en:
         video_url: Video url
         video_text: Video text
         custom_url: Custom url
+        height: Height
+        width: Width
