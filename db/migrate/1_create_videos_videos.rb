@@ -3,7 +3,7 @@ class CreateVideosVideos < ActiveRecord::Migration
   def up
     create_table Refinery::Videos::Video.table_name do |t|
       t.string :title
-      t.string :video_text
+      t.text :video_text
       t.string :video_url
       t.string :custom_url
       t.integer :position
