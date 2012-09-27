@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.name              = %q{refinerycms-sl-videos}
   s.version           = version
   s.description       = %q{Ruby on Rails Videos extension for Refinery CMS.}
-  s.summary           = %q{Ruby on Rails Videos extension for Refinery CMS.}
+  s.summary           = %q{A page for videos from diferent sources, in a blog format with multilingual support, custom urls and seo.}
   s.email             = %q{simplelogica@simplelogica.net}
   s.homepage          = %q{http://www.github.com/simplelogica/refinerycms-sl-videos}
   s.authors           = ['Simplelógica']
